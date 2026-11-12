@@ -1,0 +1,9 @@
+{
+  "install": "npm install",
+  "terminals": [
+    {
+      "name": "Checkboard",
+      "command": "npm run dev"
+    }
+  ]
+}

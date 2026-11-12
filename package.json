@@ -1,0 +1,15 @@
+{
+  "name": "checkboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small browser app a Cursor cloud agent can install, run, and click through.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "node --test test/"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="board">
+      <header class="mast">
+        <div>
+          <p class="eyebrow">Cloud agent demo</p>
+          <h1>Checkboard</h1>
+        </div>
+        <p class="health" id="health" data-testid="health" data-state="checking">
+          Checking server
+        </p>
+      </header>
+
+      <form class="composer" id="composer">
+        <label class="sr-only" for="task-input">New task</label>
+        <input
+          id="task-input"
+          data-testid="task-input"
+          type="text"
+          maxlength="140"
+          placeholder="Add something to check"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="add-task" data-testid="add-task">Add</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="tablist" aria-label="Filter tasks">
+          <button type="button" class="filter is-active" data-filter="all" data-testid="filter-all">All</button>
+          <button type="button" class="filter" data-filter="active" data-testid="filter-active">Active</button>
+          <button type="button" class="filter" data-filter="done" data-testid="filter-done">Done</button>
+        </div>
+        <p class="remaining" id="remaining" data-testid="remaining">0 left</p>
+      </div>
+
+      <ul class="tasks" id="task-list" data-testid="task-list"></ul>
+
+      <p class="empty" id="empty" data-testid="empty" hidden>Nothing in this view.</p>
+
+      <footer class="actions">
+        <button type="button" id="load-samples" data-testid="load-samples">Load sample tasks</button>
+        <button type="button" id="clear-done" data-testid="clear-done">Clear done</button>
+      </footer>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
